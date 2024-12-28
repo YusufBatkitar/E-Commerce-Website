@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="checkout.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+                <input type="text" id="card-number" placeholder="Card Number" required>
+                <input type="text" id="expiry" placeholder="Expiry Date" required> <!-- expiry alanı eklendi -->
+                <input type="text" id="cvv" placeholder="CVV" required>
+                <button type="submit">Make Payment</button>
+            </form>
+            <div class="signup-link"><br>
+                <a href="shop.html">Back to Shop</a>
+            </div>
+        </div>
+    </div>
+    <div id="success-message" class="hidden">
+        Payment was successful! Thank you for your purchase.
+    </div>
+</body>
+</html>

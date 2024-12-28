@@ -14,14 +14,15 @@ body {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: auto;
     max-width: 400px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
-    height: 400px;
+    height: auto;
     text-align: center;
+    overflow: hidden;
 }
 
 h2 {
@@ -117,6 +118,23 @@ button[type="submit"]:hover {
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+textarea {
+    width: 100%; /* Full Name alanıyla aynı genişlik */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    resize: none; /* Kullanıcı yeniden boyutlandırmasın */
+    height: 100px; /* Alanın dikey boyutu */
+}
+
+textarea:focus {
+    border-color: #173B61;
+    outline: none;
 }
 
 /* Animasyonlar */
