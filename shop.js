@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const products = {
         women: [
             { id: 2, img: "img/ayakkabi2.jpg", name: "Women's Boots", price: 699.99 },
-            { id: 5, img: "img/Nike.jpg", name: "Nike Sneakers", price: 3229.99 },
-            { id: 6, img: "img/Nike2.jpg", name: "Men's Running Shoes", price: 2259.99 },
+            { id: 5, img: "img/nike.jpg", name: "Nike Sneakers", price: 3229.99 },
+            { id: 6, img: "img/nike2.jpg", name: "Men's Running Shoes", price: 2259.99 },
             { id: 9, img: "img/kadinsneaker.jpg", name: "Derinet Sneakers", price: 1299.99 },
             { id: 7, img: "img/kadinsneaker2.jpg", name: "Skech Sneaker", price: 699.99 },
             { id: 4, img: "img/kadinsneaker3.jpg", name: "JohnMay Shoes", price: 2229.99 },
