@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - MUM Sneakers</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="shop.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MUM Sneakers</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#footer">About Us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button a href="contact.html"class="btn" id="contact-us-btn">Contact Us</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="filter-search">
+        <input type="text" id="search" class="search-bar" placeholder="Search for products...">
+        <div class="filters">
+            <select id="category-filter" class="filter">
+                <option value="all">All Categories</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+            </select>
+            <input type="range" id="price-filter" min="0" max="4000" step="10" value="4000">
+            <span id="price-value">4000</span>
+        </div>
+    </div>
+
+    <section class="featured-products">
+        <div class="product-grid" id="product-container">
+            <!--JavaScript -->
+        </div>
+    </section>
+    <div id="added-to-cart-message" style="display:none;"></div>
+</body>
+<footer id="footer">
+    <div class="footer-container">
+        <div class="left-footer">
+            <h3>About Us</h3>
+            <p>211005023 Muhammed Yusuf Batkitar <br> 201005011 Muhammed Rüstem Koçak <br> 211005040 Umut Alkan <br> <br> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters, as opposed to using.
+            </p>
+        </div>
+        <div class="middle-footer">
+                <h3>Social Media</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        <div class="right-footer"> 
+            <div class="contact-info">
+                <h3>Communication</h3>
+                <p><strong>Telephone:</strong> +90 555 55 55</p>
+                <p><strong>Address:</strong> Gazi Mustafa Kemal, Kaynaklar Cd., 35665 Menemen/İzmir</p>
+            </div>
+
+            <div class="map">
+                <h3>Map</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.9025843494437!2d26.96120287573313!3d38.58209107179305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbce0d70291201%3A0xc309f7e92ee72bd9!2zxLB6bWlyIEJha8SxcsOnYXkgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1735365137994!5m2!1str!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+</html>
+
