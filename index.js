@@ -89,15 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Giriş yaptıysa
     if (loggedIn === "true") {
         const storedUser = JSON.parse(localStorage.getItem("user"));
-        usernameSpan.textContent = storedUser.username;  // Kullanıcı adını ekliyoruz
-        greetingMessage.style.display = "block";  // Mesajı gösteriyoruz
+        usernameSpan.textContent = storedUser.username; 
+        greetingMessage.style.display = "block";  
         loginBtn.style.display = "none"; 
         signupBtn.style.display = "none";
         logoutBtn.style.display = "inline-block";
 
-        // Her login işleminde gösterilecek mesajı 3 saniye sonra gizle
         setTimeout(() => {
-            greetingMessage.style.display = "none";  // Mesajı 3 saniye sonra gizle
+            greetingMessage.style.display = "none";
         }, 3000);
     } else {
         loginBtn.style.display = "inline-block"; 

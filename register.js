@@ -15,7 +15,7 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         // Güncellenmiş listeyi kaydet
         localStorage.setItem('users', JSON.stringify(users));
 
-        // Başarı mesajı
+    
         const successMessage = document.createElement('div');
         successMessage.textContent = 'Your registration has been completed successfully!';
         successMessage.style.position = 'fixed';
@@ -29,10 +29,9 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         successMessage.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
         document.body.appendChild(successMessage);
 
-        // Mesajı 2 saniye sonra kaldır ve yönlendir
         setTimeout(() => {
             successMessage.remove();
-            window.location.href = 'login.html'; // Kullanıcıyı yönlendir
+            window.location.href = 'login.html'; 
         }, 2000);
     } else {
         alert('Please fill in all the fields!');

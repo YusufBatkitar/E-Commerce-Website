@@ -98,9 +98,9 @@ button[type="submit"]:hover {
     border-radius: 5px;
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 9999;  /* Mesajın üstte görünmesini sağlar */
+    z-index: 9999; 
     display: inline-block;
-    animation: fadeIn 1s, fadeOut 2s 2s; /* Mesajın görünürlük animasyonu */
+    animation: fadeIn 1s, fadeOut 2s 2s;
 }
 .hidden {
     display: none;
@@ -120,7 +120,7 @@ button[type="submit"]:hover {
     z-index: 1000;
 }
 textarea {
-    width: 100%; /* Full Name alanıyla aynı genişlik */
+    width: 100%; 
     padding: 0.8rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
@@ -128,8 +128,8 @@ textarea {
     font-size: 1rem;
     background-color: #f9f9f9;
     color: #333;
-    resize: none; /* Kullanıcı yeniden boyutlandırmasın */
-    height: 100px; /* Alanın dikey boyutu */
+    resize: none;
+    height: 100px; 
 }
 
 textarea:focus {
@@ -137,7 +137,6 @@ textarea:focus {
     outline: none;
 }
 
-/* Animasyonlar */
 @keyframes fadeIn {
     from {
         opacity: 0;

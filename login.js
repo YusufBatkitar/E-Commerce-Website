@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (user) {
             // Kullanıcı doğrulandı
-            localStorage.setItem('loggedIn', 'true'); // Burada "true" string olarak kaydediyoruz
+            localStorage.setItem('loggedIn', 'true'); 
             localStorage.setItem('user', JSON.stringify(user)); // Kullanıcı bilgilerini kaydediyoruz
 
             window.location.href = 'index.html';  // Başarılı girişten sonra index.html'e yönlendir
