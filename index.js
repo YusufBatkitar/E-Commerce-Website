@@ -118,4 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'contact.html'; 
     });
 });
+document.querySelector("a[href='#footer']").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector("#footer").scrollIntoView({
+        behavior: "smooth"
+    });
+    
+});
 
