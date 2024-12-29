@@ -38,7 +38,7 @@ a {
 .nav-links a {
     color: #F5EEE6;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 120%;
     padding: 0.3rem 0.7rem;
     border-radius: 5%;
     transition: transform 0.2s ease, background-color 0.3s ease;
@@ -46,7 +46,7 @@ a {
 
 .nav-links a:hover {
     transform: scale(1.05);
-    background-color: #444;
+    background-color: #ff0000;
 }
 
 .nav-links a.active {
@@ -251,7 +251,7 @@ a {
 
 .product-image img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
 }
 
