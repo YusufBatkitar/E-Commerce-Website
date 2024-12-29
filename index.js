@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 4, img: "img/erkeksneaker3.jpg", name: "Puma Sneaker", price: 749.99, category: "new" }
         ],
         discounted: [
-            { id: 5, img: "img/Nike.jpg", name: "Nike Sneakers", price: 3229.99, category: "discounted" },
-            { id: 6, img: "img/Nike2.jpg", name: "Nike Woman Sneaker", price: 2259.99, category: "discounted" },
+            { id: 5, img: "img/nike.jpg", name: "Nike Sneakers", price: 3229.99, category: "discounted" },
+            { id: 6, img: "img/nike2.jpg", name: "Nike Woman Sneaker", price: 2259.99, category: "discounted" },
             { id: 7, img: "img/kadinsneaker2.jpg", name: "Skech Sneaker", price: 699.99, category: "discounted" },
             { id: 8, img: "img/erkeksneaker1.jpg", name: "Skechers Sneakers", price: 3229.99, category: "discounted" }
         ]
