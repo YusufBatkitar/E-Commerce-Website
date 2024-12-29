@@ -28,4 +28,3 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
         alert('Please fill in all fields!');
     }
 });
-

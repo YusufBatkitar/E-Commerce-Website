@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (user) {
             // Kullanıcı doğrulandı
-            localStorage.setItem('loggedIn', true);
-            localStorage.setItem('user', JSON.stringify(user)); 
+            localStorage.setItem('loggedIn', 'true'); // Burada "true" string olarak kaydediyoruz
+            localStorage.setItem('user', JSON.stringify(user)); // Kullanıcı bilgilerini kaydediyoruz
 
-            alert('Login successful!');
-            window.location.href = 'index.html';
+            window.location.href = 'index.html';  // Başarılı girişten sonra index.html'e yönlendir
         } else {
             alert('Invalid username or password. Please try again.');
         }
     });
 });
+

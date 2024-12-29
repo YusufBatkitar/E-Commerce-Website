@@ -96,5 +96,8 @@ document.querySelector("a[href='#footer']").addEventListener("click", function (
     document.querySelector("#footer").scrollIntoView({
         behavior: "smooth"
     });
+    
+    document.getElementById('contact-us-btn').addEventListener('click', function() {
+        window.location.href = 'contact.html'; 
+    });
 });
-
