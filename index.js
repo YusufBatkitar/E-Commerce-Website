@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
             renderProducts(products[category]);
         });
     });
+    document.getElementById('contact-us-btn').addEventListener('click', function() {
+        window.location.href = 'contact.html';
+    });
 
     renderProducts(products.discounted);
 

@@ -1,6 +1,6 @@
 document.getElementById('checkout-form').addEventListener('submit', function(event) { 
     event.preventDefault();
-    console.log('Form submit button clicked'); // Formun gönderilme olayını kontrol etmek için
+    console.log('Form submit button clicked');
 
     // Kullanıcıdan alınan bilgileri kontrol edin
     const address = document.getElementById('address').value.trim();
@@ -10,7 +10,7 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
 
   
     if (address && cardNumber && expiry && cvv) {
-        // Başarı mesajını göster
+    
         const successMessage = document.getElementById('success-message');
         successMessage.textContent = 'Your payment has been received. Thank you!';
         successMessage.style.display = 'block';
@@ -20,10 +20,8 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
             window.location.href = "index.html";
         }, 3000);
 
-       
         this.reset();
     } else {
-        // Eksik bilgi uyarısı
         alert('Please fill in all fields!');
     }
 });

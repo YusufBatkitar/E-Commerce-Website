@@ -6,6 +6,8 @@
     <title>Shop - MUM Sneakers</title>
     <link rel="stylesheet" href="styles.css">
     <script src="shop.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <header>
@@ -32,6 +34,16 @@
                 <option value="women">Women</option>
                 <option value="men">Men</option>
             </select>
+            <div class="filter">
+                <label for="color-filter">Color:</label>
+                <select id="color-filter">
+                    <option value="all">All Colors</option>
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="cream">Cream</option>
+                </select>
+            </div>
             <input type="range" id="price-filter" min="0" max="4000" step="10" value="4000">
             <span id="price-value">4000</span>
         </div>

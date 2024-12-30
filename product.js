@@ -11,34 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 6, img: "img/nike2.jpg", name: "Nike Woman Sneaker", price: 2259.99, description: "Elegant and stylish." },
         { id: 7, img: "img/kadinsneaker2.jpg", name: "Skech Sneaker", price: 699.99, description: "Comfortable and trendy." },
         { id: 8, img: "img/erkeksneaker1.jpg", name: "Skechers Sneakers", price: 3229.99, description: "Perfect for sports." },
-        { id:9,  img: "img/kadinsneaker.jpg", name: "Derinet Sneakers", price: 1299.99 },
-        { id:10, img: "img/kadinsneaker4.jpg", name: "Purrai", price: 3149.99 },
-        { id:11, img: "img/kadinsneaker6.jpg", name: "Skechers Sneaker", price: 2199.99 },
-        { id:12, img: "img/erkeksneaker2.jpg", name: "Skechers Sneakers", price: 2199.99 },
-        { id:13, img: "img/erkeksneaker3.jpg", name: "Puma", price: 749.99 },
-        { id:14, img: "img/erkeksneaker4.jpg", name: "Premiata Men's", price: 959.99 },
-        { id:15, img: "img/erkeksneaker5.jpg", name: "Nike Sneaker", price: 3179.99 },
-        { id:16, img: "img/erkeksneaker6.jpg", name: "Puma Men Sneaker", price: 2299.99 },
-        { id:17, img: "img/erkeksneaker7.jpeg", name: "New Balance Men Sneaker", price: 519.99 }
+        { id:9,  img: "img/kadinsneaker.jpg", name: "Derinet Sneakers", price: 1299.99, description: "Great sneakers!"},
+        { id:10, img: "img/kadinsneaker4.jpg", name: "Purrai", price: 3149.99, description: "Great sneakers!" },
+        { id:11, img: "img/kadinsneaker6.jpg", name: "Skechers Sneaker", price: 2199.99 , description: "Great sneakers!"},
+        { id:12, img: "img/erkeksneaker2.jpg", name: "Skechers Sneakers", price: 2199.99, description: "Great sneakers!" },
+        { id:13, img: "img/erkeksneaker3.jpg", name: "Puma", price: 749.99, description: "Great sneakers!" },
+        { id:14, img: "img/erkeksneaker4.jpg", name: "Premiata Men's", price: 959.99, description: "Great sneakers!" },
+        { id:15, img: "img/erkeksneaker5.jpg", name: "Nike Sneaker", price: 3179.99, description: "Great sneakers!" },
+        { id:16, img: "img/erkeksneaker6.jpg", name: "Puma Men Sneaker", price: 2299.99 , description: "Great sneakers!"},
+        { id:17, img: "img/erkeksneaker7.jpeg", name: "New Balance Men Sneaker", price: 519.99, description: "Great sneakers!" }
     ];
 
    const product = products.find(p => p.id == productId);
 
    if (product) {
-       // Ürün detaylarını sayfada göster
        document.getElementById("product-image").src = product.img;
        document.getElementById("product-name").textContent = product.name;
        document.getElementById("product-price").textContent = `${product.price} TL`;
        document.getElementById("product-description").textContent = product.description;
 
-       // Sepete ekleme butonuna tıklanma olayı
+    
        const addToCartBtn = document.getElementById("add-to-cart");
        addToCartBtn.addEventListener("click", () => {
            addToCart(product); 
            showAddedToCartMessage(product);
        });
 
-       // Favorilere ekleme butonuna tıklanma olayı
        const addToFavoritesBtn = document.querySelector('.wishlist-btn');
        addToFavoritesBtn.addEventListener("click", () => {
            addToFavorites(product);
@@ -50,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // Sepete ürün ekleme fonksiyonu
    function addToCart(product) {
-       const cartData = JSON.parse(localStorage.getItem("cart")) || []; // LocalStorage'dan sepete veri al
+       const cartData = JSON.parse(localStorage.getItem("cart")) || []; 
        const existingProduct = cartData.find(item => item.name === product.name);
 
        if (existingProduct) {
@@ -79,8 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
        const existingProduct = favorites.find(item => item.name === product.name);
 
        if (!existingProduct) {
-           favorites.push(product); // Eğer ürün favorilerde yoksa, ekle
-           localStorage.setItem("favorites", JSON.stringify(favorites)); // Favorileri kaydet
+           favorites.push(product); 
+           localStorage.setItem("favorites", JSON.stringify(favorites)); 
        }
    }
 
@@ -99,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
        message.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.2)";
        document.body.appendChild(message);
 
-       // Mesajı 3 saniye sonra kaldır
        setTimeout(() => {
            message.remove();
        }, 3000);

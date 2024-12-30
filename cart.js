@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
             addedToCartMessage.style.display = "none";
         }, 3000);
     }
-
-    // Remove butonunun tıklama olayı
     cartItemsContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove-btn")) {
             const index = event.target.dataset.index;
@@ -72,23 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     function removeItem(index) {
-        // Eğer ürün miktarı 1'den fazla ise miktarı bir azalt
+        
         if (cartData[index].quantity > 1) {
             cartData[index].quantity -= 1;
         } else {
-            // Eğer miktar 1 ise, ürünü tamamen sepetten çıkar
+          
             cartData.splice(index, 1);
         }
     
         // Sepeti localStorage'a kaydet
         localStorage.setItem("cart", JSON.stringify(cartData)); 
-        
-        // Sepeti yeniden render et
         renderCart();
     }
     
-
-
     renderCart();
 });
 document.querySelector("a[href='#footer']").addEventListener("click", function (event) {

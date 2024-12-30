@@ -6,13 +6,10 @@ document.getElementById('register-form').addEventListener('submit', function(eve
     const password = document.getElementById('password').value;
 
     if (username && email && password) {
-        // Mevcut kullanıcıları getir veya boş bir liste oluştur
         const users = JSON.parse(localStorage.getItem('users')) || [];
 
-        // Kullanıcıyı listeye ekle
         users.push({ username, email, password });
 
-        // Güncellenmiş listeyi kaydet
         localStorage.setItem('users', JSON.stringify(users));
 
     
