@@ -155,6 +155,17 @@ a {
 .btn:hover {
     background-color: #cc0000;
 }
+.personalized-message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #173B61;
+    cursor: pointer;
+}
+
+.personalized-message:hover {
+    color: #cc0000;
+}
 
 /* Featured Products */
 .category-buttons {
@@ -236,7 +247,6 @@ a {
     font-size: 0.9rem;
     color: #333;
 }
-/* Mobil cihazlar için özel düzenlemeler */
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
@@ -376,7 +386,7 @@ a {
 .wishlist-btn:hover {
     background-color: #cc0000;
 }
-/* Mobil cihazlar için medya sorgusu */
+
 @media (max-width: 768px) {
     .product-detail {
         flex-direction: column; 
@@ -483,7 +493,6 @@ a {
     font-size: 16px;
     z-index: 1000;
 }
-/* Mobil cihazlar için medya sorgusu */
 @media (max-width: 768px) {
     .cart-table th, 
     .cart-table td {
@@ -565,7 +574,6 @@ iframe {
     width: 100%; 
     height: 200px;
 }
-/* Tablet cihazlar */
 @media (max-width: 1024px) {
     .navbar {
         padding: 1rem;

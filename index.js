@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 6, img: "img/nike2.jpg", name: "Nike Woman Sneaker", price: 2259.99, category: "discounted" },
             { id: 7, img: "img/kadinsneaker2.jpg", name: "Skech Sneaker", price: 699.99, category: "discounted" },
             { id: 8, img: "img/erkeksneaker1.jpg", name: "Skechers Sneakers", price: 3229.99, category: "discounted" }
+        ],
+        special: [  
+            {id:15, img: "img/erkeksneaker5.jpg", name: "Nike Sneaker", price: 3179.99, category: "special" },
+            {id:13, img: "img/erkeksneaker3.jpg", name: "Puma", price: 749.99, category: "special" },
+            {id:17, img: "img/erkeksneaker7.jpeg", name: "New Balance Men Sneaker", price: 519.99, category: "special" },
+            { id:10, img: "img/kadinsneaker4.jpg", name: "Purrai", price: 3149.99, category: "special" }
         ]
     };
 
@@ -79,39 +85,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderProducts(products.discounted);
 
-    const loggedIn = localStorage.getItem("loggedIn");
-    const loginBtn = document.querySelector(".auth-buttons .btn[href='login.html']");
-    const signupBtn = document.querySelector(".auth-buttons .btn[href='register.html']");
-    const logoutBtn = document.getElementById("logout-btn");
-    const greetingMessage = document.getElementById("greeting-message");
-    const usernameSpan = document.getElementById("username");
+    function checkLoginStatus() {
+        const loggedIn = localStorage.getItem("loggedIn");
+        const loginBtn = document.querySelector(".auth-buttons .btn[href='login.html']");
+        const signupBtn = document.querySelector(".auth-buttons .btn[href='register.html']");
+        const logoutBtn = document.getElementById("logout-btn");
+        const greetingMessage = document.getElementById("greeting-message");
+        const usernameSpan = document.getElementById("username");
 
-    // Giriş yaptıysa
-    if (loggedIn === "true") {
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-        usernameSpan.textContent = storedUser.username; 
-        greetingMessage.style.display = "block";  
-        loginBtn.style.display = "none"; 
-        signupBtn.style.display = "none";
-        logoutBtn.style.display = "inline-block";
+        if (loggedIn === "true") {
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+            usernameSpan.textContent = storedUser.username;
+            loginBtn.style.display = "none";
+            signupBtn.style.display = "none";
+            logoutBtn.style.display = "inline-block"; 
 
-        setTimeout(() => {
-            greetingMessage.style.display = "none";
-        }, 3000);
-    } else {
-        loginBtn.style.display = "inline-block"; 
-        signupBtn.style.display = "inline-block";
-        logoutBtn.style.display = "none"; 
+            // Yeni butonun eklenmesi
+            const specialButtonContainer = document.getElementById("special-button-container");
+            const specialButton = document.createElement("button");
+            specialButton.classList.add("category-btn");
+            specialButton.textContent = `${storedUser.username}, Our special products for you`;
+            specialButton.addEventListener("click", () => {
+                categoryBtns.forEach(b => b.classList.remove("active"));
+                specialButton.classList.add("active");
+                renderProducts(products.special); 
+            });
+            specialButtonContainer.appendChild(specialButton);
+
+            setTimeout(() => {
+                greetingMessage.style.display = "none";
+            }, 3000);
+        } else { 
+            loginBtn.style.display = "inline-block";
+            signupBtn.style.display = "inline-block";
+            logoutBtn.style.display = "none"; 
+        }
     }
 
+    
+    checkLoginStatus();
+
+   
+    const fromLogin = localStorage.getItem("fromLogin");
+    const greetingMessage = document.getElementById("greeting-message");
+
+    if (fromLogin === "true") {
+        greetingMessage.style.display = "block";
+        localStorage.removeItem("fromLogin");
+        setTimeout(() => {
+            greetingMessage.style.display = "none"; 
+        }, 3000);
+    }
+
+   
+    const logoutBtn = document.getElementById("logout-btn");
     logoutBtn.addEventListener("click", function () {
         localStorage.removeItem("loggedIn");
         localStorage.removeItem("user"); 
-        window.location.href = "index.html";
+        window.location.href = "index.html"; 
     });
 
-document.getElementById('contact-us-btn').addEventListener('click', function() {
+u
+    document.getElementById('contact-us-btn').addEventListener('click', function() {
         window.location.href = 'contact.html';     
     });
+});
+document.querySelector("a[href='#footer']").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector("#footer").scrollIntoView({
+        behavior: "smooth"
+    });
+    
 });
 
