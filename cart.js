@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartSummary = document.getElementById("cart-summary");
     const addedToCartMessage = document.getElementById("added-to-cart-message");
 
-    // Sepeti LocalStorage'dan yükleme
     function loadCartData() {
         const storedCart = localStorage.getItem("cart");
         return storedCart ? JSON.parse(storedCart) : [];
@@ -77,8 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
           
             cartData.splice(index, 1);
         }
-    
-        // Sepeti localStorage'a kaydet
+
         localStorage.setItem("cart", JSON.stringify(cartData)); 
         renderCart();
     }

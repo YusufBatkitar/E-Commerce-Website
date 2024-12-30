@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
        alert("No product found!");
    }
 
-   // Sepete ürün ekleme fonksiyonu
    function addToCart(product) {
        const cartData = JSON.parse(localStorage.getItem("cart")) || []; 
        const existingProduct = cartData.find(item => item.name === product.name);
@@ -57,11 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
            cartData.push({ ...product, quantity: 1 });
        }
 
-       // Sepeti LocalStorage'a kaydet
        localStorage.setItem("cart", JSON.stringify(cartData));
    }
 
-   // Sepete ürün eklendi mesajı
    function showAddedToCartMessage(product) {
        const message = document.getElementById("added-to-cart-message");
        message.textContent = `${product.name} added to cart`;
@@ -71,9 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
        }, 3000);
    }
 
-   // Favorilere ürün ekleme fonksiyonu
    function addToFavorites(product) {
-       const favorites = JSON.parse(localStorage.getItem("favorites")) || []; // LocalStorage'dan favorileri al
+       const favorites = JSON.parse(localStorage.getItem("favorites")) || []; 
        const existingProduct = favorites.find(item => item.name === product.name);
 
        if (!existingProduct) {
@@ -82,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
        }
    }
 
-   // Favorilere ürün eklendi mesajı
    function showAddedToFavoritesMessage(product) {
        const message = document.createElement("div");
        message.textContent = `${product.name} has been added to favorites!`;
@@ -111,10 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.star').forEach(star => {
         star.addEventListener('click', function() {
             const ratingValue = this.getAttribute('data-value');
-            // Puanı localStorage veya backend'de saklayabilirsiniz
+           
             console.log('Puan:', ratingValue);
-            
-            // Yıldızları işaretle
             this.parentNode.querySelectorAll('.star').forEach(star => {
                 star.classList.remove('selected');
             });

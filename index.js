@@ -103,11 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
             signupBtn.style.display = "none";
             logoutBtn.style.display = "inline-block"; 
 
-            // Yeni butonun eklenmesi
             const specialButtonContainer = document.getElementById("special-button-container");
             const specialButton = document.createElement("button");
             specialButton.classList.add("category-btn");
-            specialButton.textContent = `${storedUser.username}, Our special products for you`;
+            specialButton.textContent = `${storedUser.username}, our special products for you`;
             specialButton.addEventListener("click", () => {
                 categoryBtns.forEach(b => b.classList.remove("active"));
                 specialButton.classList.add("active");

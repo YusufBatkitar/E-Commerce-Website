@@ -2,7 +2,6 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
     event.preventDefault();
     console.log('Form submit button clicked');
 
-    // Kullanıcıdan alınan bilgileri kontrol edin
     const address = document.getElementById('address').value.trim();
     const cardNumber = document.getElementById('card-number').value.trim();
     const expiry = document.getElementById('expiry').value.trim();
